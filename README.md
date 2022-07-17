@@ -4,24 +4,24 @@
 
 information is one of the most important quantities that exist
 
-correct information can lead to improvement of a system
+correct information can lead to the improvement of a system  
 false information can hurt a system
 
 the current best source of information is wikipedia, which lives in web2 (1)
 
-the aim of this project is to bring wiki to web3
+the aim of this project is to bring wikipedia to web3
 
 ## how does it work?
 
 the solution is entirely **on-chain**.
 
-start with accredited accounts - e.g. only academics employed by official universities
-these can vote on any published white paper, whether they believe it be closer to true or closer to false
-or vote on specific versions of a wiki page e.g.
+start with accredited accounts - e.g. only academics employed by official universities.
+ these can vote on any published white paper, whether they believe it be closer to true or closer to false
+or vote on specific versions of a wiki page e.g. or any other statement.
 
 voters get coins as rewards (r >= 0) for voting, have a cost (c >= 0) associated with voting, and have a reputation from the community
 
-later, other communities can get accredited (e.g. lawyers guild, etc.)
+later, other communities can get accredited (e.g. lawyers guild, etc.)  
 later, everyone can vote
 
 ## the solution
@@ -50,11 +50,12 @@ with wiki3, it would be easy
 
 ## the difficulty
 
-the parameters could depend on 
-r rewards = 
-c costs
-could depend on 
-voting is motivitad via reward tokens and filtered via accreditation ("soulbound NFTs" on accounts)
+the parameters could depend on rep(utation)
+r(rep) rewards  
+c(rep) costs // though maybe this better be constant c==c(rep)  
+
+the project would consist of researching and optimising for the best (r,c)  
+
 
 ## why
 
@@ -64,6 +65,12 @@ everybody would agree that having a transparent, "unbribeble" (2) source of info
 
 the quality of a system of this importance has to be the best. according to my deep knowledge of maths and computing, i believe that is clearly Algorand.
 
-notes
-(1) even though wikipedia is not perfect, there is no better source for a lot of information; so, it is the best
+## safety
+
+each university would carry the burden of proof of id, i.e. we give university issued emails a frozen NFT. that is their id. can be resend and NFT is connected to their email.
+
+the rest has perfect security. everyone will get exactly the coins they should, etc.
+
+## notes  
+(1) even though wikipedia is not perfect, there is no better source for a lot of information; so, it is the best  
 (2) hopefully difficult to bribe large network => let accounts put up awards for specific white papers, like a mining reward.
