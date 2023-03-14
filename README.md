@@ -61,10 +61,6 @@ the project would consist of researching and optimising for the best (r,c)
 
 everybody would agree that having a transparent, "unbribeble" (2) source of info is vital for the continuation of a society that we would like to live in.
 
-## Algorand
-
-the quality of a system of this importance has to be the best. according to my deep knowledge of maths and computing, i believe that is clearly Algorand.
-
 ## safety
 
 each university would carry the burden of proof of id, i.e. we give university issued emails a frozen NFT. that is their id. can be resend and NFT is connected to their email.
