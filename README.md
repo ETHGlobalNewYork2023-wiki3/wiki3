@@ -1,5 +1,8 @@
 # wiki3
 
+1. vote veracity level of a given statement S
+2. dApp aggregates opinion given any filter
+
 ## wikipedia in web3
 
 information is one of the most important quantities that exist
