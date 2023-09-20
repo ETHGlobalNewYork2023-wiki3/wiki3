@@ -60,6 +60,7 @@ identities can be extracted from the users' contract.
 - login
 - search bar for information (via content uri at first, later can add features to search based on actual content)
 - filter bar to add identities that are ANDed (via NFT id at first, translation from human language later)
+- given a publication, vote (=comment)
 - show endless scroll of publications that have at least one wiki3 vote
 - keep it simple
 
