@@ -43,11 +43,11 @@ after the tech is implemented, an effort should be made to onboard various insti
 
 the Lens framework provides a data structure that if interpreted opportunistically, provides this project the entire backend.
 
-information -> publication
-vote -> comment with a specific strucfure: 
-WIKI3_veracity_voterid1,voterid2,voterid3,...
-e.g.
-WIKI3_0.764_3874384,3897345,8987456,...
+information -> publication  
+vote -> comment with a specific strucfure:  
+WIKI3_veracity_voterid1,voterid2,voterid3,...  
+e.g.  
+WIKI3_0.764_3874384,3897345,8987456,...  
 
 the ids are recorded in the vote at the time of voting. e.g. a biologist working for MIT voted a certain way, but now does not work for MIT anymore. we will count the vote based on the identities present at voting time.
 
