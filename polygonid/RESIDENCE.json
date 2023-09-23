@@ -1,34 +1,15 @@
 {
     "$metadata": {
+        "type": "1",
         "uris": {
-            "jsonLdContext": "https://example.com/path/to/file/context.jsonld"
+            "jsonLdContext": "ipfs://QmYA4Ub5suJYCMityxuZV5GtiTyi65wxXoRq4suSfXBqbv"
         },
-        "version": "1.0",
-        "type": "1"
+        "version": "1.0"
     },
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": " ",
     "title": "RESIDENCE",
     "properties": {
-        "credentialSubject": {
-            "description": "Stores the data of the credential",
-            "title": "Credential subject",
-            "properties": {
-                "city": {
-                    "description": "city of residence",
-                    "title": "city",
-                    "type": "string"
-                },
-                "id": {
-                    "description": "Stores the DID of the subject that owns the credential",
-                    "title": "Credential subject ID",
-                    "format": "uri",
-                    "type": "string"
-                }
-            },
-            "required": [],
-            "type": "object"
-        },
         "@context": {
             "type": [
                 "string",
@@ -72,6 +53,25 @@
                 "type": "string"
             }
         },
+        "credentialSubject": {
+            "description": "Stores the data of the credential",
+            "title": "Credential subject",
+            "properties": {
+                "city": {
+                    "description": "city of residence",
+                    "title": "city",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Stores the DID of the subject that owns the credential",
+                    "title": "Credential subject ID",
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "type": "object"
+        },
         "credentialSchema": {
             "properties": {
                 "id": {
@@ -90,12 +90,12 @@
         }
     },
     "required": [
-        "credentialSubject",
         "@context",
         "id",
         "issuanceDate",
         "issuer",
         "type",
+        "credentialSubject",
         "credentialSchema"
     ],
     "type": "object"
