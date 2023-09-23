@@ -1,4 +1,3 @@
-// app/layout.tsx
 "use client";
 import "./globals.css";
 import { polygonMumbai, polygon } from "wagmi/chains";
@@ -32,18 +31,17 @@ const lensConfig: LensConfig = {
 };
 
 export default function RootLayout({
-                                     children,
-                                   }: {
+  children,
+}: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-    <WagmiConfig config={config}>
-      <LensProvider config={lensConfig}>
-        <body>{children}</body>
-      </LensProvider>
-    </WagmiConfig>
+      <WagmiConfig config={config}>
+        <LensProvider config={lensConfig}>
+          <body>{children}</body>
+        </LensProvider>
+      </WagmiConfig>
     </html>
   );
 }
-
