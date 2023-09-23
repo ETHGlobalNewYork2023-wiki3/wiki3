@@ -1,14 +1,16 @@
+// app/layout.tsx
 "use client";
 import "./globals.css";
 import { polygonMumbai, polygon } from "wagmi/chains";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import { InjectedConnector } from "wagmi/connectors/injected";
-import { LensProvider, LensConfig, production } from "@lens-protocol/react-web";
+import { LensProvider, LensConfig, production, development } from "@lens-protocol/react-web";
 import { bindings as wagmiBindings } from "@lens-protocol/wagmi";
 
 const { publicClient, webSocketPublicClient } = configureChains(
-  [polygonMumbai, polygon],
+  [polygonMumbai],
+  // [polygonMumbai, polygon],
   [publicProvider()]
 );
 
@@ -27,7 +29,8 @@ const config = createConfig({
 
 const lensConfig: LensConfig = {
   bindings: wagmiBindings(),
-  environment: production,
+  // environment: production,
+  environment: development,
 };
 
 export default function RootLayout({
