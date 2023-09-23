@@ -1,4 +1,5 @@
 'use client'
+import React from "react";
 import { useAccessToken, useActiveProfile, useExplorePublications, useFeed } from "@lens-protocol/react-web";
 import { fetchFeeData } from "wagmi/actions";
 import { ProfileId } from "@lens-protocol/react-web";
