@@ -16,8 +16,8 @@ import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
 
 export default function Profile({
-                                  params: { handle  }
-                                }) {
+  params: { handle  }
+}) {
   // new hooks
   const { execute: login } = useWalletLogin();
   const { execute: logout } = useWalletLogout();
@@ -33,15 +33,24 @@ export default function Profile({
 
   // new login function
   const onLoginClick = async () => {
+    console.log('onLoginClick')
     if (isConnected) {
       await disconnectAsync();
     }
+    console.log('onLoginClick 2')
     const { connector } = await connectAsync();
+    console.log('onLoginClick 3', connector)
     if (connector instanceof InjectedConnector) {
+      console.log('onLoginClick 4')
       const walletClient = await connector.getWalletClient();
-      await login({
+      console.log('onLoginClick 5')
+      const r = await login({
         address: walletClient.account.address,
       });
+      console.log('onLoginClick 6', walletClient.account.address)
+      console.log('onLoginClick 7', loading)
+      console.log('onLoginClick 8', wallet)
+      console.log('onLoginClick 9', r)
     }
   };
 
@@ -92,10 +101,10 @@ export default function Profile({
 
 // new component
 function FollowComponent({
-                           wallet,
-                           profile,
-                           isConnected,
-                         }: {
+  wallet,
+  profile,
+  isConnected,
+}: {
   isConnected: boolean;
   profile: Profile;
   wallet: ProfileOwnedByMe;

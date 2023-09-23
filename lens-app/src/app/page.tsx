@@ -7,7 +7,7 @@ export default function Home() {
   const { data: profiles } = useExploreProfiles({
     limit: 25
   })
-
+  
   return (
     <div className='p-20'>
       <h1 className='text-5xl'>My Lens App</h1>
