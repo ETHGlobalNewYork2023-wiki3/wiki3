@@ -2,14 +2,37 @@
 'use client'
 import { useExploreProfiles } from '@lens-protocol/react-web'
 import Link from 'next/link'
+import useGenerateQrCode from "../hooks/useGenerateQrCode"
+import { useMemo } from "react"
+import { v4 as uuidv4 } from "uuid"
+import { useQRCode } from "next-qrcode"
 
 export default function Home() {
   const { data: profiles } = useExploreProfiles({
     limit: 25
   })
+
+  // Generate a unique session ID using uuid library.
+  const sessionId = useMemo(() => uuidv4(), [])
+  // Used to render the QR code.
+  // const { Canvas } = useQRCode()
+  const {
+    data: qrCode,
+    isLoading: loadingQrCode,
+    isError: qrCodeError,
+  } = useGenerateQrCode(sessionId)
+  console.log('qrCode', qrCode)
   
   return (
     <div className='p-20'>
+      {/* <div className="flex justify-center">
+          <Canvas
+            text={JSON.stringify(qrCode)}
+            options={{
+              width: 384,
+            }}
+          />
+        </div> */}
       <h1 className='text-5xl'>My Lens App</h1>
       {
         profiles?.map((profile, index) => (

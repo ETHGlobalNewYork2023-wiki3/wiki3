@@ -7,6 +7,7 @@ import { publicProvider } from "wagmi/providers/public";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import { LensProvider, LensConfig, production, development } from "@lens-protocol/react-web";
 import { bindings as wagmiBindings } from "@lens-protocol/wagmi";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const { publicClient, webSocketPublicClient } = configureChains(
   [polygonMumbai],
@@ -33,6 +34,8 @@ const lensConfig: LensConfig = {
   environment: development,
 };
 
+const queryClient = new QueryClient();
+
 export default function RootLayout({
   children,
 }: {
@@ -42,7 +45,9 @@ export default function RootLayout({
     <html lang="en">
       <WagmiConfig config={config}>
         <LensProvider config={lensConfig}>
-          <body>{children}</body>
+          <QueryClientProvider client={queryClient}>
+            <body>{children}</body>
+          </QueryClientProvider>
         </LensProvider>
       </WagmiConfig>
     </html>

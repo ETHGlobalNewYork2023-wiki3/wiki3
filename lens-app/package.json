@@ -1,5 +1,5 @@
 {
-  "name": "lens-app",
+  "name": "wiki3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iden3/js-iden3-auth": "1.0.0-beta.7",
+    "@polybase/client": "^0.6.2",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@tanstack/react-query": "^4.29.19",
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "autoprefixer": "10.4.14",
+    "class-variance-authority": "^0.6.1",
+    "clsx": "^1.2.1",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.8",
+    "lucide-react": "^0.258.0",
+    "next-qrcode": "^2.4.1",
+    "postcss": "8.4.24",
+    "raw-body": "^2.5.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^1.13.2",
+    "tailwindcss": "3.3.2",
+    "tailwindcss-animate": "^1.0.6",
+    "uuid": "^9.0.0",
     "@apollo/client": "^3.8.4",
     "@lens-protocol/react-web": "^1.3.1",
     "@lens-protocol/wagmi": "^2.1.1",
@@ -20,6 +43,8 @@
     "wagmi": "^1.4.2"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^4.29.9",
+    "@types/uuid": "^9.0.2",
     "@types/node": "^20.6.3",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
