@@ -1,6 +1,7 @@
 // app/page.tsx
 'use client'
 import { useExploreProfiles } from '@lens-protocol/react-web'
+import React from 'react'
 import Link from 'next/link'
 
 export default function Home() {
