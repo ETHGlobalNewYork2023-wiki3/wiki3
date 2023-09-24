@@ -1,5 +1,6 @@
 import React from "react";
 import { Post, useComments } from "@lens-protocol/react-web";
+import Comments from "./Comments";
 
 function convertIPFSToGateway(ipfsHash: string) {
     const doubleipfs = "ipfs://ipfs://"
@@ -17,7 +18,7 @@ const Post = ({ post } : { post : Post}) => {
     let images;
     let imageURLS;
     let imageALTS;
-    const {data: comments, loading: isCommentsLoading, hasMore, next} = useComments({commentsOf: post.id});
+
     if (post.__typename === "Post") {
         content = post.metadata.content
         images = post.metadata.media
@@ -31,24 +32,19 @@ const Post = ({ post } : { post : Post}) => {
     }
 
     return (
-    <div className="flex content-center flex-wrap">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-8">
+    <div className="flex content-center w-full">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-8 w-1/2">
             <img className="w-full" src={imageURLS[0]} alt={ imageALTS[0] }></img>
             <div className="px-8 py-4">
                 <p className="text-gray-900 text-base">{post.profile.name} </p>
                 <p className="text-gray-800">
                     {formatedDate}
                 </p>
-                <p className="text-gray-700 text-base">{content}</p>
+                <p className="text-gray-700 text-base whitespace-normal">{content}</p>
         
             </div>
         </div>
-        <div className="text-center">
-            <p> Comments</p>
-            {
-                isCommentsLoading ? <p> Loading ...</p> : JSON.stringify(comments)
-            }
-        </div>
+        <Comments postId={post.id} />
     </div>
     )
             
