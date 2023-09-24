@@ -1,14 +1,30 @@
 // app/page.tsx
 'use client'
 import { useExploreProfiles } from '@lens-protocol/react-web'
-import React from 'react'
+import React, { useMemo } from 'react'
 import Link from 'next/link'
+import useGenerateQrCode from "@/hooks/useGenerateQrCode";
+import { useQRCode } from "next-qrcode";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Home() {
   const { data: profiles } = useExploreProfiles({
     limit: 25
   })
-  
+
+  // Generate a unique session ID using uuid library.
+  const sessionId = useMemo(() => uuidv4(), []);
+
+  // Used to render the QR code.
+  const { Canvas } = useQRCode();
+
+  // Fetch the QR code from the server with loading + error states thanks to TanStack Query.
+  const {
+    data: qrCode,
+    isLoading: loadingQrCode,
+    isError: qrCodeError,
+  } = useGenerateQrCode(sessionId);
+
   return (
     <div className='p-20'>
       <h1 className='text-5xl'>My Lens App</h1>
