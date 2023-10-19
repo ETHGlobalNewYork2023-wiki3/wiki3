@@ -1,5 +1,7 @@
 # wiki3 - wikipedia on web3 - the truth on web3
 
+WINNER OF BEST USE CASE OF POLYGON ID AT ETHGLOBAL NYC 2023
+
 ## motivation
 
 given a statement S, we are going to define it's veracity (truth value) as any number between 0 and 1, 0 standing for totally false, 1 for totally true (fuzzy logic).
